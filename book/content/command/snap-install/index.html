@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>snap install - Ubuntu snap 使用筆記</title>
+      
+      
+      
+        <link rel="canonical" href="https://foreachsam.github.io/book-util-snap/book/content/command/snap-install/">
+      
+      
+        <meta name="author" content="foreachsam">
+      
+    
+    <meta property="og:url" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap-install/">
+    <meta property="og:title" content="Ubuntu snap 使用筆記">
+    <meta property="og:image" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap-install//../../../">
+    <meta name="apple-mobile-web-app-title" content="Ubuntu snap 使用筆記">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../None">
+    <link rel="icon" type="image/x-icon" href="../../../None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../../assets/fonts/icon.eot?52m981');
+      	src: url('../../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../../assets/stylesheets/application-54f87043f3.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono">
+      <style>
+        body, input {
+          font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-teal palette-accent-light-teal">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                command <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        snap install
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/foreachsam/book-util-snap" title="@foreachsam/book-util-snap on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          Ubuntu snap 使用筆記
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="首頁" href="../../..">
+      首頁
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">參考文件</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="manual" href="../../referance/manual/">
+      manual
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">deb package</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="index" href="../../deb-package/">
+      index
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="snapd" href="../../deb-package/snapd/">
+      snapd
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">command</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="snap" href="../snap/">
+      snap
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="snap find" href="../snap-find/">
+      snap find
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="snap install" href="./">
+      snap install
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="manpage" href="#manpage">
+                manpage
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="help" href="#help">
+                help
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="指令範例" href="#_1">
+                指令範例
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索" href="#_2">
+                探索
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/" href="#snap">
+                探索 /snap/
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/bin" href="#snapbin">
+                探索 /snap/bin
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /etc/profile.d/apps-bin-path.sh" href="#etcprofiledapps-bin-pathsh">
+                探索 /etc/profile.d/apps-bin-path.sh
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/hello-world" href="#snaphello-world">
+                探索 /snap/hello-world
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/hello-world/current/meta/snap.yaml" href="#snaphello-worldcurrentmetasnapyaml">
+                探索 /snap/hello-world/current/meta/snap.yaml
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/hello-world/current/bin/echo" href="#snaphello-worldcurrentbinecho">
+                探索 /snap/hello-world/current/bin/echo
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/hello-world/current/bin/env" href="#snaphello-worldcurrentbinenv">
+                探索 /snap/hello-world/current/bin/env
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/hello-world/current/bin/evil" href="#snaphello-worldcurrentbinevil">
+                探索 /snap/hello-world/current/bin/evil
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/hello-world/current/bin/sh" href="#snaphello-worldcurrentbinsh">
+                探索 /snap/hello-world/current/bin/sh
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/hello-world/current/bin/showdev" href="#snaphello-worldcurrentbinshowdev">
+                探索 /snap/hello-world/current/bin/showdev
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /snap/hello-world/current/bin/showdev" href="#snaphello-worldcurrentbinshowdev_1">
+                探索 /snap/hello-world/current/bin/showdev
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /var/snap" href="#varsnap">
+                探索 /var/snap
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /var/lib/snapd/" href="#varlibsnapd">
+                探索 /var/lib/snapd/
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /var/lib/snapd/state.json" href="#varlibsnapdstatejson">
+                探索 /var/lib/snapd/state.json
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /var/lib/snapd/apparmor/profiles/snap.hello-world.echo" href="#varlibsnapdapparmorprofilessnaphello-worldecho">
+                探索 /var/lib/snapd/apparmor/profiles/snap.hello-world.echo
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /var/lib/snapd/seccomp/profiles/snap.hello-world.echo" href="#varlibsnapdseccompprofilessnaphello-worldecho">
+                探索 /var/lib/snapd/seccomp/profiles/snap.hello-world.echo
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/foreachsam/book-util-snap" target="_blank" title="@foreachsam/book-util-snap on GitHub">
+                  @foreachsam/book-util-snap on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="snap-install">snap install</h1>
+<h2 id="manpage">manpage</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ man snap</code></pre>
+
+
+<p>可以找到一段說明</p>
+<pre class="code"><code>COMMANDS
+
+...略...
+
+   install
+       Install a snap to the system
+
+       The install command installs and activates the named snap in the system.
+
+       Usage: snap install [install-OPTIONS]
+
+       --channel
+              Install from this channel instead of the device's default
+
+       --devmode
+              Install the snap with non-enforcing security</code></pre>
+
+
+<h2 id="help">help</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap -h</code></pre>
+
+
+<p>可以找到一段說明</p>
+<pre class="code"><code>Usage:
+  snap [OPTIONS] &lt;command&gt;
+
+Help Options:
+  -h, --help  Show this help message
+
+Available commands:
+
+...略...
+
+  install     Install a snap to the system</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap install -h</code></pre>
+
+
+<p>或是執行</p>
+<pre class="code"><code class="language-sh">$ snap install --help</code></pre>
+
+
+<p>則會顯示</p>
+<pre class="code"><code>Usage:
+  snap [OPTIONS] install [install-OPTIONS] &lt;snap&gt;
+
+The install command installs and activates the named snap in the system.
+
+Help Options:
+  -h, --help         Show this help message
+
+[install command options]
+          --channel= Install from this channel instead of the device's default
+          --devmode  Install the snap with non-enforcing security</code></pre>
+
+
+<h2 id="_1">指令範例</h2>
+<p>執行</p>
+<pre class="code"><code>$ snap install</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>error: the required argument `&lt;snap&gt;` was not provided</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ sudo snap install hello-world</code></pre>
+
+
+<p>會有安裝的動態</p>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap list</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Name         Version               Developer
+hello-world  6.0                   canonical
+ubuntu-core  16.04+20160419.20-55  canonical</code></pre>
+
+
+<p>在一次執行</p>
+<pre class="code"><code>$ sudo snap install hello-world</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>error: can't install &quot;hello-world&quot;: snap &quot;hello-world&quot; already installed</code></pre>
+
+
+<h2 id="_2">探索</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ whereis hello-world</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>hello-world: /snap/bin/hello-world.sh /snap/bin/hello-world.usehw /snap/bin/hello-world.env /snap/bin/hello-world.echo /snap/bin/hello-world.showdev /snap/bin/hello-world.evil</code></pre>
+
+
+<h2 id="snap">探索 /snap/</h2>
+<p>執行</p>
+<pre class="code"><code>ls /snap/ -1</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>bin
+hello-world
+ubuntu-core</code></pre>
+
+
+<h2 id="snapbin">探索 /snap/bin</h2>
+<p>執行</p>
+<pre class="code"><code>$ tree /snap/bin</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>/snap/bin
+├── hello-world.echo
+├── hello-world.env
+├── hello-world.evil
+├── hello-world.sh
+├── hello-world.showdev
+└── hello-world.usehw
+
+0 directories, 6 files</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ hello-world.echo</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Hello World!</code></pre>
+
+
+<h2 id="etcprofiledapps-bin-pathsh">探索 /etc/profile.d/apps-bin-path.sh</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /etc/profile.d/apps-bin-path.sh</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code># Expand the $PATH to include /snaps/bin which is what snappy applications
+# use
+PATH=$PATH:/snap/bin</code></pre>
+
+
+<h2 id="snaphello-world">探索 /snap/hello-world</h2>
+<p>執行</p>
+<pre class="code"><code>$ tree /snap/hello-world/</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>/snap/hello-world/
+├── 25
+│   ├── bin
+│   │   ├── echo
+│   │   ├── env
+│   │   ├── evil
+│   │   ├── sh
+│   │   ├── showdev
+│   │   └── usehw
+│   └── meta
+│       ├── icon.png
+│       └── snap.yaml
+└── current -&gt; 25
+
+4 directories, 8 files</code></pre>
+
+
+<h2 id="snaphello-worldcurrentmetasnapyaml">探索 /snap/hello-world/current/meta/snap.yaml</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /snap/hello-world/current/meta/snap.yaml</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>name: hello-world
+version: 6.0
+architectures: [ all ]
+summary: The hello-world of snappy apps
+description: This is a simple hello world example that includes a
+  interesting apps to play with snappy and the sandboxing in snappy
+    hello-world.echo - simply output text
+    hello-world.env - dump the env of commands run inside app sandbox
+    hello-world.evil - show how snappy prevents apps to do stuff outside their sandbox
+    hello-world.showdev - depreated - will be replaced with skills
+    hello-world.usehw - depreated - will be replaced with skills example
+    hello-world.sh - enter interactive shell that runs in app sandbox
+apps:
+ echo:
+   command: bin/echo
+ env:
+   command: bin/env
+ evil:
+   command: bin/evil
+ showdev:
+   command: bin/showdev
+ usehw:
+   command: bin/usehw
+ sh:
+   command: bin/sh</code></pre>
+
+
+<h2 id="snaphello-worldcurrentbinecho">探索 /snap/hello-world/current/bin/echo</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /snap/hello-world/current/bin/echo</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code class="language-sh linenums">#!/bin/sh
+
+echo &quot;Hello World!&quot;</code></pre>
+
+
+<h2 id="snaphello-worldcurrentbinenv">探索 /snap/hello-world/current/bin/env</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /snap/hello-world/current/bin/env</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code class="language-bash linenums">#!/bin/bash
+
+/usr/bin/env</code></pre>
+
+
+<h2 id="snaphello-worldcurrentbinevil">探索 /snap/hello-world/current/bin/evil</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /snap/hello-world/current/bin/evil</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code class="language-sh linenums">#!/bin/sh
+
+set -e
+echo &quot;Hello Evil World!&quot;
+
+echo &quot;This example demonstrates the app confinement&quot;
+echo &quot;You should see a permission denied error next&quot;
+
+echo &quot;Haha&quot; &gt; /var/tmp/myevil.txt
+
+echo &quot;If you see this line the confinement is not working correctly, please file a bug&quot;</code></pre>
+
+
+<h2 id="snaphello-worldcurrentbinsh">探索 /snap/hello-world/current/bin/sh</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /snap/hello-world/current/bin/sh</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code class="language-bash linenums">#!/bin/bash
+
+cat &lt;&lt;EOM
+Launching a shell inside the default app confinement. Navigate to your
+app-specific directories with:
+
+  $ cd \$SNAP
+  $ cd \$SNAP_DATA
+  $ cd \$SNAP_USER_DATA
+
+EOM
+
+/bin/bash --norc -i</code></pre>
+
+
+<h2 id="snaphello-worldcurrentbinshowdev">探索 /snap/hello-world/current/bin/showdev</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /snap/hello-world/current/bin/showdev</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code class="language-sh linenums">#!/bin/sh
+
+# show the view on the /dev/ system of an app
+
+args=$@
+test -z &quot;$args&quot; &amp;&amp; findargs=/dev/
+test -n &quot;$args&quot; &amp;&amp; findargs=$args
+
+echo &quot;Hello /dev World: Here is what I can see with 'find $findargs'&quot;
+
+find $findargs
+
+APPNAME=`echo $SNAP | cut -f 3 -d '/'`
+echo &quot;&quot;
+echo &quot;Here is hardware that has been assigned to me ($APPNAME):&quot;
+udevadm trigger --verbose --dry-run --tag-match=snappy-assign --property-match=SNAPPY_APP=&quot;$APPNAME&quot;</code></pre>
+
+
+<h2 id="snaphello-worldcurrentbinshowdev_1">探索 /snap/hello-world/current/bin/showdev</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /snap/hello-world/current/bin/showdev</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code class="language-sh linenums">#!/bin/sh
+
+set -e
+echo &quot;Hello hw-assign world!&quot;
+
+echo &quot;This example demonstrates the app confinement for assigned hardware&quot;
+echo &quot;&quot;
+
+APPNAME=`echo $SNAP | cut -f 3 -d '/'`
+if [ -z &quot;$APPNAME&quot; ]; then
+    echo &quot;Could not determine application name.&quot;
+    exit 1
+fi
+hw=`udevadm trigger --verbose --dry-run --tag-match=snappy-assign --property-match=SNAPPY_APP=&quot;$APPNAME&quot; | grep kmsg || true`
+if [ -z &quot;$hw&quot; ]; then
+    echo &quot;No hardware is assigned for this device. Try adding /dev/kmsg with:&quot;
+    echo &quot;  $ sudo snappy hw-assign $APPNAME /dev/kmsg&quot;
+else
+    echo &quot;Good, '$hw' is assigned to us.&quot;
+    echo &quot;Now try to read a line from /dev/kmsg:&quot;
+    head -1 /dev/kmsg
+    echo &quot;&quot;
+    echo &quot;It worked!&quot;
+fi</code></pre>
+
+
+<h2 id="varsnap">探索 /var/snap</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ tree /var/snap</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>/var/snap
+├── hello-world
+│   ├── 25
+│   └── current -&gt; 25
+└── ubuntu-core
+    ├── 109
+    └── current -&gt; 109
+
+6 directories, 0 files</code></pre>
+
+
+<h2 id="varlibsnapd">探索 /var/lib/snapd/</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ tree /var/lib/snapd/</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>/var/lib/snapd/
+├── apparmor
+│   ├── additional
+│   └── profiles
+│       ├── snap.hello-world.echo
+│       ├── snap.hello-world.env
+│       ├── snap.hello-world.evil
+│       ├── snap.hello-world.sh
+│       ├── snap.hello-world.showdev
+│       └── snap.hello-world.usehw
+├── assertions
+│   ├── asserts-v0
+│   └── private-keys-v0
+├── desktop
+│   └── applications
+├── lib
+│   └── gl
+├── seccomp
+│   └── profiles
+│       ├── snap.hello-world.echo
+│       ├── snap.hello-world.env
+│       ├── snap.hello-world.evil
+│       ├── snap.hello-world.sh
+│       ├── snap.hello-world.showdev
+│       └── snap.hello-world.usehw
+├── snaps
+│   ├── hello-world_25.snap
+│   └── ubuntu-core_109.snap
+└── state.json
+
+13 directories, 15 files</code></pre>
+
+
+<h2 id="varlibsnapdstatejson">探索 /var/lib/snapd/state.json</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ sudo less /var/lib/snapd/state.json</code></pre>
+
+
+<h2 id="varlibsnapdapparmorprofilessnaphello-worldecho">探索 /var/lib/snapd/apparmor/profiles/snap.hello-world.echo</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ less /var/lib/snapd/apparmor/profiles/snap.hello-world.echo</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code># Description: Allows access to app-specific directories and basic runtime
+# Usage: common
+
+# vim:syntax=apparmor
+
+#include &lt;tunables/global&gt;
+
+@{APP_NAME}=&quot;echo&quot;
+@{SNAP_NAME}=&quot;hello-world&quot;
+@{SNAP_REVISION}=&quot;25&quot;
+@{INSTALL_DIR}=&quot;/snap&quot;
+
+profile &quot;snap.hello-world.echo&quot; (attach_disconnected) {
+  #include &lt;abstractions/base&gt;
+  #include &lt;abstractions/consoles&gt;
+  #include &lt;abstractions/openssl&gt;
+
+  # for python apps/services
+  #include &lt;abstractions/python&gt;
+  /usr/bin/python{,2,2.[0-9]*,3,3.[0-9]*} ixr,
+  deny /usr/lib/python3*/{,**/}__pycache__/ w,              # noisy
+  deny /usr/lib/python3*/{,**/}__pycache__/**.pyc.[0-9]* w,
+
+  # for perl apps/services
+  #include &lt;abstractions/perl&gt;
+  /usr/bin/perl{,5*} ixr,
+
+# TODO: we must remove these since things like 'container-management' will be
+# broken if we have explicit denies. However, the development tools need to be
+# clear that these can't be allowed.
+  # Explicitly deny ptrace for now since it can be abused to break out of the
+  # seccomp sandbox. https://lkml.org/lkml/2015/3/18/823
+#  audit deny ptrace (trace),
+
+  # Explicitly deny capability mknod so apps can't create devices
+#  audit deny capability mknod,
+
+  # Explicitly deny mount, remount and umount so apps can't modify things in
+  # their namespace
+#  audit deny mount,
+#  audit deny remount,
+#  audit deny umount,
+
+  # for bash 'binaries' (do *not* use abstractions/bash)
+  # user-specific bash files
+  /bin/bash ixr,
+  /bin/dash ixr,
+  /etc/bash.bashrc r,
+  /etc/{passwd,group,nsswitch.conf} r,  # very common
+  /etc/libnl-3/{classid,pktloc} r,      # apps that use libnl
+  /var/lib/extrausers/{passwd,group} r,
+  /etc/profile r,
+  /usr/share/terminfo/** r,
+  /etc/inputrc r,
+  deny @{HOME}/.inputrc r,
+  # Common utilities for shell scripts
+  /{,usr/}bin/{,g,m}awk ixr,
+  /{,usr/}bin/basename ixr,
+  /{,usr/}bin/bunzip2 ixr,
+  /{,usr/}bin/bzcat ixr,
+  /{,usr/}bin/bzdiff ixr,
+  /{,usr/}bin/bzgrep ixr,
+  /{,usr/}bin/bzip2 ixr,
+  /{,usr/}bin/cat ixr,
+  /{,usr/}bin/chmod ixr,
+  /{,usr/}bin/cmp ixr,
+  /{,usr/}bin/cp ixr,
+  /{,usr/}bin/cpio ixr,
+  /{,usr/}bin/cut ixr,
+  /{,usr/}bin/date ixr,
+  /{,usr/}bin/dd ixr,
+  /{,usr/}bin/diff{,3} ixr,
+  /{,usr/}bin/dir ixr,
+  /{,usr/}bin/dirname ixr,
+  /{,usr/}bin/echo ixr,
+  /{,usr/}bin/{,e,f,r}grep ixr,
+  /{,usr/}bin/env ixr,
+  /{,usr/}bin/expr ixr,
+  /{,usr/}bin/false ixr,
+  /{,usr/}bin/find ixr,
+  /{,usr/}bin/fmt ixr,
+  /{,usr/}bin/getopt ixr,
+  /{,usr/}bin/groups ixr,
+  /{,usr/}bin/gzip ixr,
+  /{,usr/}bin/head ixr,
+  /{,usr/}bin/hostname ixr,
+  /{,usr/}bin/id ixr,
+  /{,usr/}bin/igawk ixr,
+  /{,usr/}bin/kill ixr,
+  /{,usr/}bin/ldd ixr,
+  /{,usr/}bin/less{,file,pipe} ixr,
+  /{,usr/}bin/ln ixr,
+  /{,usr/}bin/line ixr,
+  /{,usr/}bin/link ixr,
+  /{,usr/}bin/logger ixr,
+  /{,usr/}bin/ls ixr,
+  /{,usr/}bin/md5sum ixr,
+  /{,usr/}bin/mkdir ixr,
+  /{,usr/}bin/mktemp ixr,
+  /{,usr/}bin/more ixr,
+  /{,usr/}bin/mv ixr,
+  /{,usr/}bin/openssl ixr, # may cause harmless capability block_suspend denial
+  /{,usr/}bin/pgrep ixr,
+  /{,usr/}bin/printenv ixr,
+  /{,usr/}bin/printf ixr,
+  /{,usr/}bin/ps ixr,
+  /{,usr/}bin/pwd ixr,
+  /{,usr/}bin/readlink ixr,
+  /{,usr/}bin/realpath ixr,
+  /{,usr/}bin/rev ixr,
+  /{,usr/}bin/rm ixr,
+  /{,usr/}bin/rmdir ixr,
+  /{,usr/}bin/sed ixr,
+  /{,usr/}bin/seq ixr,
+  /{,usr/}bin/sleep ixr,
+  /{,usr/}bin/sort ixr,
+  /{,usr/}bin/stat ixr,
+  /{,usr/}bin/tac ixr,
+  /{,usr/}bin/tail ixr,
+  /{,usr/}bin/tar ixr,
+  /{,usr/}bin/tee ixr,
+  /{,usr/}bin/test ixr,
+  /{,usr/}bin/tempfile ixr,
+  /{,usr/}bin/tset ixr,
+  /{,usr/}bin/touch ixr,
+  /{,usr/}bin/tr ixr,
+  /{,usr/}bin/true ixr,
+  /{,usr/}bin/uname ixr,
+  /{,usr/}bin/uniq ixr,
+  /{,usr/}bin/unlink ixr,
+  /{,usr/}bin/unxz ixr,
+  /{,usr/}bin/unzip ixr,
+  /{,usr/}bin/vdir ixr,
+  /{,usr/}bin/wc ixr,
+  /{,usr/}bin/which ixr,
+  /{,usr/}bin/xargs ixr,
+  /{,usr/}bin/xz ixr,
+  /{,usr/}bin/yes ixr,
+  /{,usr/}bin/zcat ixr,
+  /{,usr/}bin/z{,e,f}grep ixr,
+  /{,usr/}bin/zip ixr,
+  /{,usr/}bin/zipgrep ixr,
+
+  # uptime
+  /{,usr/}bin/uptime ixr,
+  @{PROC}/uptime r,
+  @{PROC}/loadavg r,
+  # this is an information leak
+  deny /{,var/}run/utmp r,
+
+  # java
+  @{PROC}/@{pid}/ r,
+  @{PROC}/@{pid}/fd/ r,
+  owner @{PROC}/@{pid}/auxv r,
+  @{PROC}/@{pid}/version_signature r,
+  @{PROC}/@{pid}/version r,
+  @{PROC}/sys/vm/zone_reclaim_mode r,
+  /etc/lsb-release r,
+  /sys/devices/**/read_ahead_kb r,
+  /sys/devices/system/cpu/** r,
+  /sys/kernel/mm/transparent_hugepage/enabled r,
+  /sys/kernel/mm/transparent_hugepage/defrag r,
+  # NOTE: this leaks running process and java seems to want it, but operates
+  # ok without it. Deny for now to silence the denial but we could allow
+  # owner match until AppArmor kernel var is available to solve this properly.
+  deny @{PROC}/@{pid}/cmdline r,
+  #owner @{PROC}/@{pid}/cmdline r,
+
+  # Miscellaneous accesses
+  /etc/mime.types r,
+  @{PROC}/ r,
+  /etc/{,writable/}hostname r,
+  /etc/{,writable/}localtime r,
+  /etc/{,writable/}timezone r,
+  @{PROC}/@{pid}/stat r,
+  @{PROC}/@{pid}/statm r,
+  @{PROC}/@{pid}/status r,
+  @{PROC}/sys/kernel/hostname r,
+  @{PROC}/sys/kernel/osrelease r,
+  @{PROC}/sys/fs/file-max r,
+  @{PROC}/sys/kernel/pid_max r,
+  @{PROC}/sys/kernel/random/uuid r,
+
+  # Eases hardware assignment (doesn't give anything away)
+  /etc/udev/udev.conf r,
+  /sys/       r,
+  /sys/bus/   r,
+  /sys/class/ r,
+
+  # this leaks interface names and stats, but not in a way that is traceable
+  # to the user/device
+  @{PROC}/net/dev r,
+
+  # Read-only for the install directory
+  @{INSTALL_DIR}/@{SNAP_NAME}/                   r,
+  @{INSTALL_DIR}/@{SNAP_NAME}/@{SNAP_REVISION}/    r,
+  @{INSTALL_DIR}/@{SNAP_NAME}/@{SNAP_REVISION}/**  mrklix,
+
+  # Don't log noisy python denials (see LP: #1496895 for more details)
+  deny @{INSTALL_DIR}/@{SNAP_NAME}/**/__pycache__/             w,
+  deny @{INSTALL_DIR}/@{SNAP_NAME}/**/__pycache__/*.pyc.[0-9]* w,
+
+  # Read-only home area for other versions
+  owner @{HOME}/snap/@{SNAP_NAME}/                  r,
+  owner @{HOME}/snap/@{SNAP_NAME}/**                mrkix,
+
+  # Writable home area for this version.
+  owner @{HOME}/snap/@{SNAP_NAME}/@{SNAP_REVISION}/** wl,
+
+  # Read-only system area for other versions
+  /var/snap/@{SNAP_NAME}/   r,
+  /var/snap/@{SNAP_NAME}/** mrkix,
+
+  # Writable system area only for this version
+  /var/snap/@{SNAP_NAME}/@{SNAP_REVISION}/** wl,
+
+  # The ubuntu-core-launcher creates an app-specific private restricted /tmp
+  # and will fail to launch the app if something goes wrong. As such, we can
+  # simply allow full access to /tmp.
+  /tmp/   r,
+  /tmp/** mrwlkix,
+
+  # Also do the same for shm
+  /{dev,run}/shm/snap/@{SNAP_NAME}/                  r,
+  /{dev,run}/shm/snap/@{SNAP_NAME}/**                rk,
+  /{dev,run}/shm/snap/@{SNAP_NAME}/@{SNAP_REVISION}/   r,
+  /{dev,run}/shm/snap/@{SNAP_NAME}/@{SNAP_REVISION}/** mrwlkix,
+
+  # Allow apps from the same package to communicate with each other via an
+  # abstract or anonymous socket
+  unix peer=(label=snap.@{SNAP_NAME}.*),
+
+  # Allow apps from the same package to signal each other via signals
+  signal peer=snap.@{SNAP_NAME}.*,
+
+  # for 'udevadm trigger --verbose --dry-run --tag-match=snappy-assign'
+  /{,s}bin/udevadm ixr,
+  /etc/udev/udev.conf r,
+  /{,var/}run/udev/tags/snappy-assign/ r,
+  @{PROC}/cmdline r,
+  /sys/devices/**/uevent r,
+
+  # LP: #1447237: adding '--property-match=SNAPPY_APP=&lt;pkgname&gt;' to the above
+  # requires:
+  #   /run/udev/data/* r,
+  # but that reveals too much about the system and cannot be granted to apps
+  # by default at this time.
+
+  # For convenience, allow apps to see what is in /dev even though cgroups
+  # will block most access
+  /dev/ r,
+  /dev/**/ r,
+
+  # Do the same with /sys/devices and /sys/class to help people using hw-assign
+  /sys/devices/ r,
+  /sys/devices/**/ r,
+  /sys/class/ r,
+  /sys/class/**/ r,
+
+
+}</code></pre>
+
+
+<h2 id="varlibsnapdseccompprofilessnaphello-worldecho">探索 /var/lib/snapd/seccomp/profiles/snap.hello-world.echo</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ less /var/lib/snapd/seccomp/profiles/snap.hello-world.echo</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code># Description: Allows access to app-specific directories and basic runtime
+# Usage: common
+#
+
+# Dangerous syscalls that we don't ever want to allow
+
+# kexec
+deny kexec_load
+
+# kernel modules
+deny create_module
+deny init_module
+deny finit_module
+deny delete_module
+
+# these have a history of vulnerabilities, are not widely used, and
+# open_by_handle_at has been used to break out of docker containers by brute
+# forcing the handle value: http://stealth.openwall.net/xSports/shocker.c
+deny name_to_handle_at
+deny open_by_handle_at
+
+# Explicitly deny ptrace since it can be abused to break out of the seccomp
+# sandbox
+deny ptrace
+
+# Explicitly deny capability mknod so apps can't create devices
+deny mknod
+deny mknodat
+
+# Explicitly deny (u)mount so apps can't change mounts in their namespace
+deny mount
+deny umount
+deny umount2
+
+# Explicitly deny kernel keyring access
+deny add_key
+deny keyctl
+deny request_key
+
+# end dangerous syscalls
+
+access
+faccessat
+
+alarm
+brk
+
+# ARM private syscalls
+breakpoint
+cacheflush
+set_tls
+usr26
+usr32
+
+capget
+# AppArmor mediates capabilities, so allow capset (useful for apps that for
+# example want to drop capabilities)
+capset
+
+chdir
+fchdir
+
+# We can't effectively block file perms due to open() with O_CREAT, so allow
+# chmod until we have syscall arg filtering (LP: #1446748)
+chmod
+fchmod
+fchmodat
+
+# snappy doesn't currently support per-app UID/GIDs so don't allow chown. To
+# properly support chown, we need to have syscall arg filtering (LP: #1446748)
+# and per-app UID/GIDs.
+#chown
+#chown32
+#fchown
+#fchown32
+#fchownat
+#lchown
+#lchown32
+
+clock_getres
+clock_gettime
+clock_nanosleep
+clone
+close
+creat
+dup
+dup2
+dup3
+epoll_create
+epoll_create1
+epoll_ctl
+epoll_ctl_old
+epoll_pwait
+epoll_wait
+epoll_wait_old
+eventfd
+eventfd2
+execve
+execveat
+_exit
+exit
+exit_group
+fallocate
+
+# requires CAP_SYS_ADMIN
+#fanotify_init
+#fanotify_mark
+
+fcntl
+fcntl64
+flock
+fork
+ftime
+futex
+get_mempolicy
+get_robust_list
+get_thread_area
+getcpu
+getcwd
+getdents
+getdents64
+getegid
+getegid32
+geteuid
+geteuid32
+getgid
+getgid32
+getgroups
+getgroups32
+getitimer
+getpgid
+getpgrp
+getpid
+getppid
+getpriority
+getrandom
+getresgid
+getresgid32
+getresuid
+getresuid32
+
+getrlimit
+ugetrlimit
+
+getrusage
+getsid
+gettid
+gettimeofday
+getuid
+getuid32
+
+getxattr
+fgetxattr
+lgetxattr
+
+inotify_add_watch
+inotify_init
+inotify_init1
+inotify_rm_watch
+
+# Needed by shell
+ioctl
+
+io_cancel
+io_destroy
+io_getevents
+io_setup
+io_submit
+ioprio_get
+# affects other processes, requires CAP_SYS_ADMIN. Potentially allow with
+# syscall filtering of (at least) IOPRIO_WHO_USER (LP: #1446748)
+#ioprio_set
+
+ipc
+kill
+link
+linkat
+
+listxattr
+llistxattr
+flistxattr
+
+lseek
+llseek
+_llseek
+lstat
+lstat64
+
+madvise
+fadvise64
+fadvise64_64
+arm_fadvise64_64
+
+mbarrier
+mbind
+mincore
+mkdir
+mkdirat
+mlock
+mlockall
+mmap
+mmap2
+mprotect
+
+# LP: #1448184 - these aren't currently mediated by AppArmor. Deny for now
+#mq_getsetattr
+#mq_notify
+#mq_open
+#mq_timedreceive
+#mq_timedsend
+#mq_unlink
+
+mremap
+msgctl
+msgget
+msgrcv
+msgsnd
+msync
+munlock
+munlockall
+munmap
+
+nanosleep
+
+# LP: #1446748 - deny until we have syscall arg filtering. Alternatively, set
+# RLIMIT_NICE hard limit for apps, launch them under an appropriate nice value
+# and allow this call
+#nice
+
+# LP: #1446748 - support syscall arg filtering for mode_t with O_CREAT
+open
+
+openat
+pause
+pipe
+pipe2
+poll
+ppoll
+
+# LP: #1446748 - support syscall arg filtering
+prctl
+arch_prctl
+
+read
+pread
+pread64
+preadv
+readv
+
+readahead
+readdir
+readlink
+readlinkat
+remap_file_pages
+
+removexattr
+fremovexattr
+lremovexattr
+
+rename
+renameat
+renameat2
+
+# The man page says this shouldn't be needed, but we've seen denials for it
+# in the wild
+restart_syscall
+
+rmdir
+rt_sigaction
+rt_sigpending
+rt_sigprocmask
+rt_sigqueueinfo
+rt_sigreturn
+rt_sigsuspend
+rt_sigtimedwait
+rt_tgsigqueueinfo
+sched_getaffinity
+sched_getattr
+sched_getparam
+sched_get_priority_max
+sched_get_priority_min
+sched_getscheduler
+sched_rr_get_interval
+# LP: #1446748 - when support syscall arg filtering, enforce pid_t is 0 so the
+# app may only change its own scheduler
+sched_setscheduler
+
+sched_yield
+
+select
+_newselect
+pselect
+pselect6
+
+semctl
+semget
+semop
+semtimedop
+sendfile
+sendfile64
+
+# While we don't yet have seccomp arg filtering (LP: #1446748), we must allow
+# these because the launcher drops privileges after seccomp_load(). Eventually
+# we will only allow dropping to particular UIDs. For now, we mediate this with
+# AppArmor
+setgid
+setgid32
+setregid
+setregid32
+setresgid
+setresgid32
+setresuid
+setresuid32
+setreuid
+setreuid32
+setuid
+setuid32
+#setgroups
+#setgroups32
+
+# These break isolation but are common and can't be mediated at the seccomp
+# level with arg filtering
+setpgid
+setpgrp
+
+set_thread_area
+setitimer
+
+# apps don't have CAP_SYS_RESOURCE so these can't be abused to raise the hard
+# limits
+setrlimit
+prlimit64
+
+set_mempolicy
+set_robust_list
+setsid
+set_tid_address
+
+setxattr
+fsetxattr
+lsetxattr
+
+shmat
+shmctl
+shmdt
+shmget
+signal
+sigaction
+signalfd
+signalfd4
+sigaltstack
+sigpending
+sigprocmask
+sigreturn
+sigsuspend
+sigtimedwait
+sigwaitinfo
+
+# needed by ls -l
+socket
+connect
+
+# Per man page, on Linux this is limited to only AF_UNIX so it is ok to have
+# in the default template
+socketpair
+
+splice
+
+stat
+stat64
+fstat
+fstat64
+fstatat64
+lstat
+newfstatat
+oldfstat
+oldlstat
+oldstat
+
+statfs
+statfs64
+fstatfs
+fstatfs64
+statvfs
+fstatvfs
+ustat
+
+symlink
+symlinkat
+
+sync
+sync_file_range
+sync_file_range2
+arm_sync_file_range
+fdatasync
+fsync
+syncfs
+sysinfo
+syslog
+tee
+tgkill
+time
+timer_create
+timer_delete
+timer_getoverrun
+timer_gettime
+timer_settime
+timerfd
+timerfd_create
+timerfd_gettime
+timerfd_settime
+times
+tkill
+
+truncate
+truncate64
+ftruncate
+ftruncate64
+
+umask
+
+uname
+olduname
+oldolduname
+
+unlink
+unlinkat
+
+utime
+utimensat
+utimes
+futimesat
+
+vfork
+vmsplice
+wait4
+oldwait4
+waitpid
+waitid
+
+write
+writev
+pwrite
+pwrite64
+pwritev</code></pre>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) foreachsam &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../snap-find/" title="snap find">
+          <span class="direction">
+            上一頁
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                snap find
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+        /* General initialization */
+        ga('create', 'UA-56999876-1', 'foreachsam.github.io');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>snapd - snap 使用筆記</title>
+        <title>snap find - snap 使用筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-util-snap/book/content/deb-package/snapd/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-util-snap/book/content/command/snap-find/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-util-snap/book/content/deb-package/snapd/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap-find/">
     <meta property="og:title" content="snap 使用筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-util-snap/book/content/deb-package/snapd//../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap-find//../../../">
     <meta name="apple-mobile-web-app-title" content="snap 使用筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -92,12 +92,12 @@
           <span class="path">
             
               
-                deb package <i class="icon icon-link"></i>
+                command <i class="icon icon-link"></i>
               
             
           </span>
         
-        snapd
+        snap find
       </div>
     </div>
     
@@ -185,7 +185,7 @@
       
         
   <li>
-    <a class="" title="index" href="../">
+    <a class="" title="index" href="../../deb-package/">
       index
     </a>
     
@@ -194,48 +194,9 @@
       
         
   <li>
-    <a class="current" title="snapd" href="./">
+    <a class="" title="snapd" href="../../deb-package/snapd/">
       snapd
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="下載套件" href="#_1">
-                下載套件
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="解開套件" href="#_2">
-                解開套件
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="觀看資料夾結構" href="#_3">
-                觀看資料夾結構
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="manpage" href="#manpage">
-                manpage
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="下載 Source Package" href="#source-package">
-                下載 Source Package
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -251,7 +212,7 @@
       
         
   <li>
-    <a class="" title="snap" href="../../command/snap/">
+    <a class="" title="snap" href="../snap/">
       snap
     </a>
     
@@ -260,9 +221,36 @@
       
         
   <li>
-    <a class="" title="snap find" href="../../command/snap-find/">
+    <a class="current" title="snap find" href="./">
       snap find
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="manpage" href="#manpage">
+                manpage
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="help" href="#help">
+                help
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="指令範例" href="#_1">
+                指令範例
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -295,141 +283,154 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="snapd">snapd 套件探索</h1>
-<h2 id="_1">下載套件</h2>
-<p>下載「<a href="http://packages.ubuntu.com/xenial/snapd">snapd</a>」這個套件。</p>
-<pre class="code"><code class="language-sh">$ apt download snapd</code></pre>
-
-
-<h2 id="_2">解開套件</h2>
-<p>解開「snapd_2.0.2_amd64.deb」</p>
-<pre class="code"><code class="language-sh">$ dpkg -x snapd_2.0.2_amd64.deb snapd</code></pre>
-
-
-<h2 id="_3">觀看資料夾結構</h2>
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ tree snapd</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>snapd
-├── etc
-│   ├── ld.so.conf.d
-│   │   └── snappy.conf
-│   ├── profile.d
-│   │   └── apps-bin-path.sh
-│   └── X11
-│       └── Xsession.d
-│           └── 65snappy
-├── lib
-│   └── systemd
-│       └── system
-│           ├── snapd.frameworks-pre.target
-│           ├── snapd.frameworks.target
-│           ├── snapd.service
-│           ├── snapd.socket
-│           ├── snappy-autopilot.service
-│           └── snappy-autopilot.timer
-├── snap
-├── usr
-│   ├── bin
-│   │   └── snap
-│   ├── lib
-│   │   └── snapd
-│   │       └── snapd
-│   └── share
-│       ├── bash-completion
-│       │   └── completions
-│       │       └── snappy
-│       ├── doc
-│       │   └── snapd
-│       │       ├── changelog.gz
-│       │       └── copyright
-│       └── man
-│           └── man1
-│               └── snap.1.gz
-└── var
-    ├── lib
-    │   └── snapd
-    │       ├── apparmor
-    │       │   └── additional
-    │       ├── lib
-    │       │   └── gl
-    │       └── snaps
-    └── snap
-
-29 directories, 15 files</code></pre>
-
-
-<p>若有安裝這個套件的話，可執行</p>
-<pre class="code"><code class="language-sh">$ dpkg -L snapd</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>/.
-/etc
-/etc/profile.d
-/etc/profile.d/apps-bin-path.sh
-/etc/X11
-/etc/X11/Xsession.d
-/etc/X11/Xsession.d/65snappy
-/etc/ld.so.conf.d
-/etc/ld.so.conf.d/snappy.conf
-/lib
-/lib/systemd
-/lib/systemd/system
-/lib/systemd/system/snapd.service
-/lib/systemd/system/snappy-autopilot.timer
-/lib/systemd/system/snapd.frameworks.target
-/lib/systemd/system/snappy-autopilot.service
-/lib/systemd/system/snapd.socket
-/lib/systemd/system/snapd.frameworks-pre.target
-/var
-/var/lib
-/var/lib/snapd
-/var/lib/snapd/lib
-/var/lib/snapd/lib/gl
-/var/lib/snapd/snaps
-/var/lib/snapd/apparmor
-/var/lib/snapd/apparmor/additional
-/var/snap
-/snap
-/usr
-/usr/bin
-/usr/bin/snap
-/usr/lib
-/usr/lib/snapd
-/usr/lib/snapd/snapd
-/usr/share
-/usr/share/bash-completion
-/usr/share/bash-completion/completions
-/usr/share/bash-completion/completions/snappy
-/usr/share/doc
-/usr/share/doc/snapd
-/usr/share/doc/snapd/changelog.gz
-/usr/share/doc/snapd/copyright
-/usr/share/man
-/usr/share/man/man1
-/usr/share/man/man1/snap.1.gz</code></pre>
-
-
+          <h1 id="snap-find">snap find</h1>
 <h2 id="manpage">manpage</h2>
-<p>顯示</p>
-<pre class="code"><code class="language-sh">$ dpkg -L snapd | grep '/man/man.*/'</code></pre>
-
-
-<pre class="code"><code>/usr/share/man/man1/snap.1.gz</code></pre>
-
-
-<ul>
-<li>$ man 1 snap</li>
-</ul>
-<h2 id="source-package">下載 Source Package</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ apt source snapd</code></pre>
+<pre class="code"><code class="language-sh">$ man snap</code></pre>
 
 
-<p>會下載「<a href="http://packages.ubuntu.com/source/xenial/snapd">snapd</a>」這個「Source Package」</p>
+<p>可以找到一段說明</p>
+<pre class="code"><code>COMMANDS
+
+...略...
+
+   find
+       Finds packages to install
+
+       The find command queries the store for available packages.</code></pre>
+
+
+<h2 id="help">help</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap -h</code></pre>
+
+
+<p>可以找到一段說明</p>
+<pre class="code"><code>snap -h
+Usage:
+ snap [OPTIONS] &lt;command&gt;
+
+Help Options:
+ -h, --help  Show this help message
+
+Available commands:
+
+...略...
+
+ find        Finds packages to install</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap find -h</code></pre>
+
+
+<p>或是執行</p>
+<pre class="code"><code class="language-sh">$ snap find --help</code></pre>
+
+
+<p>則會顯示</p>
+<pre class="code"><code>Usage:
+  snap [OPTIONS] find [&lt;query&gt;]
+
+The find command queries the store for available packages.
+
+Help Options:
+  -h, --help         Show this help message</code></pre>
+
+
+<h2 id="_1">指令範例</h2>
+<p>執行</p>
+<pre class="code"><code>$ snap find</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Name                   Version                  Summary
+canonical-dragon       0.7.1                    The gadget snap for the dragonboard
+canonical-i386         3.1                      The gadget snap for generic i386 systems
+canonical-pc           3.1                      AMD64 generic package
+canonical-pc-linux     4.4.0-18+20160419.13-26  The ubuntu-core kernel snap
+canonical-pi2          3.2                      Raspberry Pi 2 support package
+go-example-webserver   16.04-4                  Minimal Golang webserver for snappy
+hello-world            6.0                      Hello world example
+http                   4.6692016                HTTPie in a snap
+links                  2.12-1                   Web browser running in text mode
+moon-buggy             1.0.51.9                 Drive a car across the moon
+nmap                   7.12SVN-0.4              Nmap (&quot;Network Mapper&quot;) is a free and open source utility for network discovery and security auditing
+notes                  0.0.8~snap3.gita80fd1c   Note-taking application, write down your thoughts
+shout                  0.53.0                   A self hosted web IRC client
+sshtron                1.0                      multiplayer Tron via ssh
+tmux                   2.3bump1                 tmux
+tor-middle-relay       0.2.7.6-6                Essential infrastructure node for Tor network
+ubuntu-calculator-app  2.1+snap3                Ubuntu Calculator application for the Unity 7 desktop
+ubuntu-clock-app       3.6+snap3                Ubuntu Clock application for the Unity 7 desktop
+ubuntu-core            16.04+20160419.20-55     The ubuntu-core OS snap
+xkcd-webserver         16.04-5                  Show random XKCD compic via a build-in webserver
+yacas                  1.4.2                    Yet Another Computer Algebra System</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap find hello</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Name         Version  Summary
+hello-world  6.0      Hello world example</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code>$ snap find h</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Name         Version    Summary
+hello-world  6.0        Hello world example
+http         4.6692016  HTTPie in a snap</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code>$ snap find u</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Name                   Version               Summary
+ubuntu-calculator-app  2.1+snap3             Ubuntu Calculator application for the Unity 7 desktop
+ubuntu-clock-app       3.6+snap3             Ubuntu Clock application for the Unity 7 desktop
+ubuntu-core            16.04+20160419.20-55  The ubuntu-core OS snap</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code>$ snap find *u</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Name                   Version                  Summary
+canonical-pc-linux     4.4.0-18+20160419.13-26  The ubuntu-core kernel snap
+moon-buggy             1.0.51.9                 Drive a car across the moon
+shout                  0.53.0                   A self hosted web IRC client
+sshtron                1.0                      multiplayer Tron via ssh
+tmux                   2.3bump1                 tmux
+ubuntu-calculator-app  2.1+snap3                Ubuntu Calculator application for the Unity 7 desktop
+ubuntu-clock-app       3.6+snap3                Ubuntu Clock application for the Unity 7 desktop
+ubuntu-core            16.04+20160419.20-55     The ubuntu-core OS snap</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap find un</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>error: no snaps found for &quot;un&quot;</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code>$ snap find *un</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Name                   Version               Summary
+ubuntu-calculator-app  2.1+snap3             Ubuntu Calculator application for the Unity 7 desktop
+ubuntu-clock-app       3.6+snap3             Ubuntu Clock application for the Unity 7 desktop
+ubuntu-core            16.04+20160419.20-55  The ubuntu-core OS snap</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -448,7 +449,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../" title="index">
+        <a href="../snap/" title="snap">
           <span class="direction">
             上一頁
           </span>
@@ -458,7 +459,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                index
+                snap
               </div>
             </div>
           </div>
@@ -466,22 +467,6 @@
       
     </div>
     <div class="next">
-      
-        <a href="../../command/snap/" title="snap">
-          <span class="direction">
-            下一頁
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                snap
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
-            </div>
-          </div>
-        </a>
       
     </div>
   </nav>

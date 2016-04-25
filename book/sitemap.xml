@@ -43,6 +43,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://foreachsam.github.io/book-util-snap/book/content/command/snap-find/</loc>
+     <lastmod>2016-04-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

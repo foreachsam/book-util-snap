@@ -1,0 +1,119 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "snap \u4f7f\u7528\u7b46\u8a18\n\n\n\u9019\u662f\u4f7f\u7528\u300c\nsnap\n\u300d\u7684\u7c21\u55ae\u7d00\u9304\u3002\n\n\n\u74b0\u5883\n\n\n\n\nXubuntu 16.04 64\u4f4d\u5143",
+            "title": "\u9996\u9801"
+        },
+        {
+            "location": "/#snap",
+            "text": "\u9019\u662f\u4f7f\u7528\u300c snap \u300d\u7684\u7c21\u55ae\u7d00\u9304\u3002",
+            "title": "snap \u4f7f\u7528\u7b46\u8a18"
+        },
+        {
+            "location": "/#_1",
+            "text": "Xubuntu 16.04 64\u4f4d\u5143",
+            "title": "\u74b0\u5883"
+        },
+        {
+            "location": "/content/referance/manual/",
+            "text": "manual\n\n\n\u95b1\u8b80\u6587\u4ef6\n\n\n\n\n$ man 1 snap",
+            "title": "manual"
+        },
+        {
+            "location": "/content/referance/manual/#manual",
+            "text": "",
+            "title": "manual"
+        },
+        {
+            "location": "/content/referance/manual/#_1",
+            "text": "$ man 1 snap",
+            "title": "\u95b1\u8b80\u6587\u4ef6"
+        },
+        {
+            "location": "/content/deb-package/",
+            "text": "deb package\n\n\n\u5957\u4ef6\u9023\u7d50\n\n\n\n\nsanpd",
+            "title": "index"
+        },
+        {
+            "location": "/content/deb-package/#deb-package",
+            "text": "",
+            "title": "deb package"
+        },
+        {
+            "location": "/content/deb-package/#_1",
+            "text": "sanpd",
+            "title": "\u5957\u4ef6\u9023\u7d50"
+        },
+        {
+            "location": "/content/deb-package/snapd/",
+            "text": "snapd \u5957\u4ef6\u63a2\u7d22\n\n\n\u4e0b\u8f09\u5957\u4ef6\n\n\n\u4e0b\u8f09\u300c\nsnapd\n\u300d\u9019\u500b\u5957\u4ef6\u3002\n\n\n$ apt download snapd\n\n\n\n\n\u89e3\u958b\u5957\u4ef6\n\n\n\u89e3\u958b\u300csnapd_2.0.2_amd64.deb\u300d\n\n\n$ dpkg -x snapd_2.0.2_amd64.deb snapd\n\n\n\n\n\u89c0\u770b\u8cc7\u6599\u593e\u7d50\u69cb\n\n\n\u57f7\u884c\n\n\n$ tree snapd\n\n\n\n\n\u986f\u793a\n\n\nsnapd\n\u251c\u2500\u2500 etc\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 ld.so.conf.d\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 snappy.conf\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 profile.d\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 apps-bin-path.sh\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 X11\n\u2502\u00a0\u00a0     \u2514\u2500\u2500 Xsession.d\n\u2502\u00a0\u00a0         \u2514\u2500\u2500 65snappy\n\u251c\u2500\u2500 lib\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 systemd\n\u2502\u00a0\u00a0     \u2514\u2500\u2500 system\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snapd.frameworks-pre.target\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snapd.frameworks.target\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snapd.service\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snapd.socket\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snappy-autopilot.service\n\u2502\u00a0\u00a0         \u2514\u2500\u2500 snappy-autopilot.timer\n\u251c\u2500\u2500 snap\n\u251c\u2500\u2500 usr\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 bin\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 snap\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 lib\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 snapd\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0     \u2514\u2500\u2500 snapd\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 share\n\u2502\u00a0\u00a0     \u251c\u2500\u2500 bash-completion\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0 \u2514\u2500\u2500 completions\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0     \u2514\u2500\u2500 snappy\n\u2502\u00a0\u00a0     \u251c\u2500\u2500 doc\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0 \u2514\u2500\u2500 snapd\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0     \u251c\u2500\u2500 changelog.gz\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0     \u2514\u2500\u2500 copyright\n\u2502\u00a0\u00a0     \u2514\u2500\u2500 man\n\u2502\u00a0\u00a0         \u2514\u2500\u2500 man1\n\u2502\u00a0\u00a0             \u2514\u2500\u2500 snap.1.gz\n\u2514\u2500\u2500 var\n    \u251c\u2500\u2500 lib\n    \u2502\u00a0\u00a0 \u2514\u2500\u2500 snapd\n    \u2502\u00a0\u00a0     \u251c\u2500\u2500 apparmor\n    \u2502\u00a0\u00a0     \u2502\u00a0\u00a0 \u2514\u2500\u2500 additional\n    \u2502\u00a0\u00a0     \u251c\u2500\u2500 lib\n    \u2502\u00a0\u00a0     \u2502\u00a0\u00a0 \u2514\u2500\u2500 gl\n    \u2502\u00a0\u00a0     \u2514\u2500\u2500 snaps\n    \u2514\u2500\u2500 snap\n\n29 directories, 15 files\n\n\n\n\n\u82e5\u6709\u5b89\u88dd\u9019\u500b\u5957\u4ef6\u7684\u8a71\uff0c\u53ef\u57f7\u884c\n\n\n$ dpkg -L snapd\n\n\n\n\n\u986f\u793a\n\n\n/.\n/etc\n/etc/profile.d\n/etc/profile.d/apps-bin-path.sh\n/etc/X11\n/etc/X11/Xsession.d\n/etc/X11/Xsession.d/65snappy\n/etc/ld.so.conf.d\n/etc/ld.so.conf.d/snappy.conf\n/lib\n/lib/systemd\n/lib/systemd/system\n/lib/systemd/system/snapd.service\n/lib/systemd/system/snappy-autopilot.timer\n/lib/systemd/system/snapd.frameworks.target\n/lib/systemd/system/snappy-autopilot.service\n/lib/systemd/system/snapd.socket\n/lib/systemd/system/snapd.frameworks-pre.target\n/var\n/var/lib\n/var/lib/snapd\n/var/lib/snapd/lib\n/var/lib/snapd/lib/gl\n/var/lib/snapd/snaps\n/var/lib/snapd/apparmor\n/var/lib/snapd/apparmor/additional\n/var/snap\n/snap\n/usr\n/usr/bin\n/usr/bin/snap\n/usr/lib\n/usr/lib/snapd\n/usr/lib/snapd/snapd\n/usr/share\n/usr/share/bash-completion\n/usr/share/bash-completion/completions\n/usr/share/bash-completion/completions/snappy\n/usr/share/doc\n/usr/share/doc/snapd\n/usr/share/doc/snapd/changelog.gz\n/usr/share/doc/snapd/copyright\n/usr/share/man\n/usr/share/man/man1\n/usr/share/man/man1/snap.1.gz\n\n\n\n\nmanpage\n\n\n\u986f\u793a\n\n\n$ dpkg -L snapd | grep '/man/man.*/'\n\n\n\n\n/usr/share/man/man1/snap.1.gz\n\n\n\n\n\n\n$ man 1 snap\n\n\n\n\n\u4e0b\u8f09 Source Package\n\n\n\u57f7\u884c\n\n\n$ apt source snapd\n\n\n\n\n\u6703\u4e0b\u8f09\u300c\nsnapd\n\u300d\u9019\u500b\u300cSource Package\u300d",
+            "title": "snapd"
+        },
+        {
+            "location": "/content/deb-package/snapd/#snapd",
+            "text": "",
+            "title": "snapd \u5957\u4ef6\u63a2\u7d22"
+        },
+        {
+            "location": "/content/deb-package/snapd/#_1",
+            "text": "\u4e0b\u8f09\u300c snapd \u300d\u9019\u500b\u5957\u4ef6\u3002  $ apt download snapd",
+            "title": "\u4e0b\u8f09\u5957\u4ef6"
+        },
+        {
+            "location": "/content/deb-package/snapd/#_2",
+            "text": "\u89e3\u958b\u300csnapd_2.0.2_amd64.deb\u300d  $ dpkg -x snapd_2.0.2_amd64.deb snapd",
+            "title": "\u89e3\u958b\u5957\u4ef6"
+        },
+        {
+            "location": "/content/deb-package/snapd/#_3",
+            "text": "\u57f7\u884c  $ tree snapd  \u986f\u793a  snapd\n\u251c\u2500\u2500 etc\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 ld.so.conf.d\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 snappy.conf\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 profile.d\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 apps-bin-path.sh\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 X11\n\u2502\u00a0\u00a0     \u2514\u2500\u2500 Xsession.d\n\u2502\u00a0\u00a0         \u2514\u2500\u2500 65snappy\n\u251c\u2500\u2500 lib\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 systemd\n\u2502\u00a0\u00a0     \u2514\u2500\u2500 system\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snapd.frameworks-pre.target\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snapd.frameworks.target\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snapd.service\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snapd.socket\n\u2502\u00a0\u00a0         \u251c\u2500\u2500 snappy-autopilot.service\n\u2502\u00a0\u00a0         \u2514\u2500\u2500 snappy-autopilot.timer\n\u251c\u2500\u2500 snap\n\u251c\u2500\u2500 usr\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 bin\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 snap\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 lib\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 snapd\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0     \u2514\u2500\u2500 snapd\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 share\n\u2502\u00a0\u00a0     \u251c\u2500\u2500 bash-completion\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0 \u2514\u2500\u2500 completions\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0     \u2514\u2500\u2500 snappy\n\u2502\u00a0\u00a0     \u251c\u2500\u2500 doc\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0 \u2514\u2500\u2500 snapd\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0     \u251c\u2500\u2500 changelog.gz\n\u2502\u00a0\u00a0     \u2502\u00a0\u00a0     \u2514\u2500\u2500 copyright\n\u2502\u00a0\u00a0     \u2514\u2500\u2500 man\n\u2502\u00a0\u00a0         \u2514\u2500\u2500 man1\n\u2502\u00a0\u00a0             \u2514\u2500\u2500 snap.1.gz\n\u2514\u2500\u2500 var\n    \u251c\u2500\u2500 lib\n    \u2502\u00a0\u00a0 \u2514\u2500\u2500 snapd\n    \u2502\u00a0\u00a0     \u251c\u2500\u2500 apparmor\n    \u2502\u00a0\u00a0     \u2502\u00a0\u00a0 \u2514\u2500\u2500 additional\n    \u2502\u00a0\u00a0     \u251c\u2500\u2500 lib\n    \u2502\u00a0\u00a0     \u2502\u00a0\u00a0 \u2514\u2500\u2500 gl\n    \u2502\u00a0\u00a0     \u2514\u2500\u2500 snaps\n    \u2514\u2500\u2500 snap\n\n29 directories, 15 files  \u82e5\u6709\u5b89\u88dd\u9019\u500b\u5957\u4ef6\u7684\u8a71\uff0c\u53ef\u57f7\u884c  $ dpkg -L snapd  \u986f\u793a  /.\n/etc\n/etc/profile.d\n/etc/profile.d/apps-bin-path.sh\n/etc/X11\n/etc/X11/Xsession.d\n/etc/X11/Xsession.d/65snappy\n/etc/ld.so.conf.d\n/etc/ld.so.conf.d/snappy.conf\n/lib\n/lib/systemd\n/lib/systemd/system\n/lib/systemd/system/snapd.service\n/lib/systemd/system/snappy-autopilot.timer\n/lib/systemd/system/snapd.frameworks.target\n/lib/systemd/system/snappy-autopilot.service\n/lib/systemd/system/snapd.socket\n/lib/systemd/system/snapd.frameworks-pre.target\n/var\n/var/lib\n/var/lib/snapd\n/var/lib/snapd/lib\n/var/lib/snapd/lib/gl\n/var/lib/snapd/snaps\n/var/lib/snapd/apparmor\n/var/lib/snapd/apparmor/additional\n/var/snap\n/snap\n/usr\n/usr/bin\n/usr/bin/snap\n/usr/lib\n/usr/lib/snapd\n/usr/lib/snapd/snapd\n/usr/share\n/usr/share/bash-completion\n/usr/share/bash-completion/completions\n/usr/share/bash-completion/completions/snappy\n/usr/share/doc\n/usr/share/doc/snapd\n/usr/share/doc/snapd/changelog.gz\n/usr/share/doc/snapd/copyright\n/usr/share/man\n/usr/share/man/man1\n/usr/share/man/man1/snap.1.gz",
+            "title": "\u89c0\u770b\u8cc7\u6599\u593e\u7d50\u69cb"
+        },
+        {
+            "location": "/content/deb-package/snapd/#manpage",
+            "text": "\u986f\u793a  $ dpkg -L snapd | grep '/man/man.*/'  /usr/share/man/man1/snap.1.gz   $ man 1 snap",
+            "title": "manpage"
+        },
+        {
+            "location": "/content/deb-package/snapd/#source-package",
+            "text": "\u57f7\u884c  $ apt source snapd  \u6703\u4e0b\u8f09\u300c snapd \u300d\u9019\u500b\u300cSource Package\u300d",
+            "title": "\u4e0b\u8f09 Source Package"
+        },
+        {
+            "location": "/content/command/snap/",
+            "text": "snap command\n\n\n\u89c0\u770b help\n\n\n\u57f7\u884c\n\n\n$ snap\n\n\n\n\n\u986f\u793a\n\n\nerror: Please specify one command of: abort, ack, changes, connect, disconnect, find, install, interfaces, known, list, login, logout, refresh or remove\n\n\n\n\n\u57f7\u884c\u6307\u4ee4\n\n\n$ snap find\n\n\n\n\n\u89c0\u770b manpage\n\n\n\u57f7\u884c\n\n\n$ man 1 snap\n\n\n\n\n\u67e5\u8a62 snap \u653e\u5728\u90a3\u500b\u4f4d\u7f6e\n\n\n\u57f7\u884c\n\n\n$ whereis snap\n\n\n\n\n\u986f\u793a\n\n\nsnap: /usr/bin/snap /usr/share/man/man1/snap.1.gz\n\n\n\n\n\u67e5\u8a62 snap \u5c6c\u65bc\u90a3\u500b\u5957\u4ef6\n\n\n\u57f7\u884c\n\n\n$ dpkg -S /usr/bin/snap\n\n\n\n\n\u986f\u793a\n\n\nsnapd: /usr/bin/snap\n\n\n\n\n\u8868\u793a\u300c/usr/bin/snap\u300d\u662f\u5c6c\u65bc\u300c\nsnapd\n\u300d\u9019\u500b\u5957\u4ef6\u3002",
+            "title": "snap"
+        },
+        {
+            "location": "/content/command/snap/#snap-command",
+            "text": "",
+            "title": "snap command"
+        },
+        {
+            "location": "/content/command/snap/#help",
+            "text": "\u57f7\u884c  $ snap  \u986f\u793a  error: Please specify one command of: abort, ack, changes, connect, disconnect, find, install, interfaces, known, list, login, logout, refresh or remove",
+            "title": "\u89c0\u770b help"
+        },
+        {
+            "location": "/content/command/snap/#_1",
+            "text": "$ snap find",
+            "title": "\u57f7\u884c\u6307\u4ee4"
+        },
+        {
+            "location": "/content/command/snap/#manpage",
+            "text": "\u57f7\u884c  $ man 1 snap",
+            "title": "\u89c0\u770b manpage"
+        },
+        {
+            "location": "/content/command/snap/#snap",
+            "text": "\u57f7\u884c  $ whereis snap  \u986f\u793a  snap: /usr/bin/snap /usr/share/man/man1/snap.1.gz",
+            "title": "\u67e5\u8a62 snap \u653e\u5728\u90a3\u500b\u4f4d\u7f6e"
+        },
+        {
+            "location": "/content/command/snap/#snap_1",
+            "text": "\u57f7\u884c  $ dpkg -S /usr/bin/snap  \u986f\u793a  snapd: /usr/bin/snap  \u8868\u793a\u300c/usr/bin/snap\u300d\u662f\u5c6c\u65bc\u300c snapd \u300d\u9019\u500b\u5957\u4ef6\u3002",
+            "title": "\u67e5\u8a62 snap \u5c6c\u65bc\u90a3\u500b\u5957\u4ef6"
+        }
+    ]
+}

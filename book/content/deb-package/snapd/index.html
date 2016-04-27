@@ -229,8 +229,44 @@
             </li>
           
             <li class="anchor">
+              <a title="探索 /etc/profile.d/apps-bin-path.sh" href="#etcprofiledapps-bin-pathsh">
+                探索 /etc/profile.d/apps-bin-path.sh
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /etc/X11/Xsession.d/65snappy" href="#etcx11xsessiond65snappy">
+                探索 /etc/X11/Xsession.d/65snappy
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /etc/ld.so.conf.d/snappy.conf" href="#etcldsoconfdsnappyconf">
+                探索 /etc/ld.so.conf.d/snappy.conf
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="探索 /lib/systemd/system/snapd.service" href="#libsystemdsystemsnapdservice">
+                探索 /lib/systemd/system/snapd.service
+              </a>
+            </li>
+          
+            <li class="anchor">
               <a title="下載 Source Package" href="#source-package">
                 下載 Source Package
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="套件資訊" href="#_4">
+                套件資訊
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="源碼套件資訊" href="#_5">
+                源碼套件資訊
               </a>
             </li>
           
@@ -433,12 +469,155 @@
 <ul>
 <li>$ man 1 snap</li>
 </ul>
+<h2 id="etcprofiledapps-bin-pathsh">探索 /etc/profile.d/apps-bin-path.sh</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /etc/profile.d/apps-bin-path.sh</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code># Expand the $PATH to include /snaps/bin which is what snappy applications
+# use
+PATH=$PATH:/snap/bin</code></pre>
+
+
+<h2 id="etcx11xsessiond65snappy">探索 /etc/X11/Xsession.d/65snappy</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /etc/X11/Xsession.d/65snappy</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code># This file is sourced by Xsession(5), not executed.
+# Add additionnal the additonal snappy desktop path
+
+XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/snapd/desktop
+export XDG_DATA_DIRS</code></pre>
+
+
+<h2 id="etcldsoconfdsnappyconf">探索 /etc/ld.so.conf.d/snappy.conf</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /etc/ld.so.conf.d/snappy.conf</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code># snappy looks for additional gl drivers here
+/var/lib/snapd/lib/gl</code></pre>
+
+
+<h2 id="libsystemdsystemsnapdservice">探索 /lib/systemd/system/snapd.service</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ cat /lib/systemd/system/snapd.service</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>[Unit]
+Description=Snappy daemon
+#FIXME: snappy on ubuntu does not have a snapd.firstboot snap installed
+#After=snapd.firstboot.service
+Before=snapd.frameworks-pre.target
+Requires=snapd.socket
+
+[Service]
+ExecStart=/usr/lib/snapd/snapd</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ ps aux | grep snapd</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>root      6497  0.0  0.1 453508  5996 ?        Ssl  Apr25   0:02 /usr/lib/snapd/snapd
+...略...</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ systemctl status snapd.service</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>● snapd.service - Snappy daemon
+   Loaded: loaded (/lib/systemd/system/snapd.service; static; vendor preset: enabled)
+   Active: active (running) since Mon 2016-04-25 22:28:40 CST; 3h 32min ago
+ Main PID: 6497 (snapd)
+    Tasks: 12 (limit: 512)
+   CGroup: /system.slice/snapd.service
+           └─6497 /usr/lib/snapd/snapd
+
+...略...</code></pre>
+
+
 <h2 id="source-package">下載 Source Package</h2>
 <p>執行</p>
 <pre class="code"><code class="language-sh">$ apt source snapd</code></pre>
 
 
 <p>會下載「<a href="http://packages.ubuntu.com/source/xenial/snapd">snapd</a>」這個「Source Package」</p>
+<h2 id="_4">套件資訊</h2>
+<p>網址: <a href="http://packages.ubuntu.com/xenial/snapd">http://packages.ubuntu.com/xenial/snapd</a></p>
+<p>執行</p>
+<pre class="code"><code>$ apt show snapd</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Package: snapd
+Version: 2.0.2
+Built-Using: golang-1.6 (= 1.6.1-0ubuntu1), golang-check.v1 (= 0.0+git20150729.11d3bc7-2), golang-defaults (= 2:1.6-1ubuntu4), golang-github-coreos-go-systemd (= 3-2), golang-github-gorilla-mux (= 0.0~git20150814.0.f7b6aaa-1), golang-github-gosexy-gettext (= 0~git20130221-0ubuntu6), golang-github-mvo5-goconfigparser (= 0.2.1-0ubuntu1), golang-github-mvo5-uboot-go (= 0~3.git69978a3-0ubuntu5), golang-github-peterh-liner (= 0.0~git20151118.0.4d47685-1), golang-go-flags (= 0.0~git20160302-0ubuntu1), golang-go.crypto (= 1:0.0~git20151201.0.7b85b09-2), golang-gopkg-tomb.v2 (= 0.0~git20140626.14b3d72-1), golang-pb (= 0.0~git20131219-1), golang-pty (= 0.0~git20150511.1.5cf931e-1ubuntu1), golang-websocket (= 0.0~git20150811.0.b6ab76f-1), golang-yaml.v2 (= 0.0+git20160301.0.a83829b-1)
+Priority: optional
+Section: devel
+Origin: Ubuntu
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 19.0 MB
+Depends: init-system-helpers (&gt;= 1.18~), libc6 (&gt;= 2.4), adduser, lsb-release, squashfs-tools, ubuntu-core-launcher (&gt;= 1.0.23)
+Conflicts: snap (&lt;&lt; 2013-11-29-1ubuntu1), snappy
+Breaks: ubuntu-snappy (&lt;&lt; 1.9), ubuntu-snappy-cli (&lt;&lt; 1.9)
+Replaces: ubuntu-snappy (&lt;&lt; 1.9), ubuntu-snappy-cli (&lt;&lt; 1.9)
+Homepage: https://github.com/ubuntu-core/snappy
+Task: ubuntu-core, ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, ubuntu-core, edubuntu-desktop, edubuntu-usb, xubuntu-core, xubuntu-desktop, mythbuntu-desktop, lubuntu-core, ubuntustudio-desktop-core, ubuntustudio-desktop, ubuntu-gnome-desktop, ubuntukylin-desktop, ubuntu-mate-core, ubuntu-mate-desktop, ubuntu-mate-cloudtop
+Supported: 5y
+Download-Size: 4,011 kB
+APT-Manual-Installed: yes
+APT-Sources: http://tw.archive.ubuntu.com/ubuntu xenial/main amd64 Packages
+Description: Tool to interact with Ubuntu Core Snappy.
+ Manage an Ubuntu system with snappy.</code></pre>
+
+
+<h2 id="_5">源碼套件資訊</h2>
+<p>網址: <a href="http://packages.ubuntu.com/source/xenial/snapd">http://packages.ubuntu.com/source/xenial/snapd</a></p>
+<p>執行</p>
+<pre class="code"><code>$ apt showsrc snapd</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Package: snapd
+Binary: golang-github-ubuntu-core-snappy-dev, snapd, ubuntu-core-snapd-units, ubuntu-snappy, ubuntu-snappy-cli
+Version: 2.0.2
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Build-Depends: bash-completion, debhelper (&gt;= 9), dh-golang, dh-systemd, fakeroot, gettext, golang-check.v1-dev, golang-go, golang-go-flags-dev, golang-go.crypto-dev, golang-github-coreos-go-systemd-dev, golang-github-gorilla-mux-dev, golang-github-gosexy-gettext-dev, golang-github-mvo5-goconfigparser-dev, golang-github-peterh-liner-dev, golang-pb-dev, golang-pty-dev, golang-github-mvo5-uboot-go-dev, golang-yaml.v2-dev, golang-gopkg-tomb.v2-dev, golang-websocket-dev, lsb-release, python3, python3-markdown, squashfs-tools
+Architecture: any all
+Standards-Version: 3.9.7
+Format: 3.0 (native)
+Directory: pool/main/s/snapd
+Files:
+ d60c2874af681a6831163d2d87c65381 2370 snapd_2.0.2.dsc
+ 36f4ddeeffd919e28011147ffb93f3fd 338240 snapd_2.0.2.tar.xz
+Homepage: https://github.com/ubuntu-core/snappy
+Vcs-Browser: https://github.com/ubuntu-core/snappy
+Vcs-Git: https://github.com/ubuntu-core/snappy.git
+Testsuite: autopkgtest
+Package-List:
+ golang-github-ubuntu-core-snappy-dev deb devel optional arch=all
+ snapd deb devel optional arch=any
+ ubuntu-core-snapd-units deb devel optional arch=any
+ ubuntu-snappy deb oldlibs optional arch=all
+ ubuntu-snappy-cli deb oldlibs optional arch=all
+Checksums-Sha1:
+ 6fc4d0f8983091f23e426c14522f5503416a252c 2370 snapd_2.0.2.dsc
+ dd3e399389e927415d4c9ace4ad055e3eab6834a 338240 snapd_2.0.2.tar.xz
+Checksums-Sha256:
+ 092d09614cabcd2ea68c02e6f075d37c05014a702c53d275c6e6befc65f27f49 2370 snapd_2.0.2.dsc
+ 8725ec5331ace71d1aeb2d9b2ebc2105ff29e9db6dd9890c94ccb7b2382b63c9 338240 snapd_2.0.2.tar.xz</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;

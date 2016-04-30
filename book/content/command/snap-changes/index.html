@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>manual - Ubuntu snap 使用筆記</title>
+        <title>snap changes - Ubuntu snap 使用筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-util-snap/book/content/referance/manual/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-util-snap/book/content/command/snap-changes/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-util-snap/book/content/referance/manual/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap-changes/">
     <meta property="og:title" content="Ubuntu snap 使用筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-util-snap/book/content/referance/manual//../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap-changes//../../../">
     <meta name="apple-mobile-web-app-title" content="Ubuntu snap 使用筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -92,12 +92,12 @@
           <span class="path">
             
               
-                參考文件 <i class="icon icon-link"></i>
+                command <i class="icon icon-link"></i>
               
             
           </span>
         
-        manual
+        snap changes
       </div>
     </div>
     
@@ -167,24 +167,9 @@
       
         
   <li>
-    <a class="current" title="manual" href="./">
+    <a class="" title="manual" href="../../referance/manual/">
       manual
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="閱讀文件" href="#_1">
-                閱讀文件
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -227,7 +212,7 @@
       
         
   <li>
-    <a class="" title="snap" href="../../command/snap/">
+    <a class="" title="snap" href="../snap/">
       snap
     </a>
     
@@ -236,7 +221,7 @@
       
         
   <li>
-    <a class="" title="snap find" href="../../command/snap-find/">
+    <a class="" title="snap find" href="../snap-find/">
       snap find
     </a>
     
@@ -245,7 +230,7 @@
       
         
   <li>
-    <a class="" title="snap install" href="../../command/snap-install/">
+    <a class="" title="snap install" href="../snap-install/">
       snap install
     </a>
     
@@ -254,9 +239,36 @@
       
         
   <li>
-    <a class="" title="snap changes" href="../../command/snap-changes/">
+    <a class="current" title="snap changes" href="./">
       snap changes
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="manpage" href="#manpage">
+                manpage
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="help" href="#help">
+                help
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="指令範例" href="#_1">
+                指令範例
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -289,11 +301,68 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="manual">manual</h1>
-<h2 id="_1">閱讀文件</h2>
-<ul>
-<li>$ man 1 snap</li>
-</ul>
+          <h1 id="snap-changes">snap changes</h1>
+<h2 id="manpage">manpage</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ man snap</code></pre>
+
+
+<p>可以找到一段說明</p>
+<pre class="code"><code>COMMANDS
+
+...略...
+
+   changes
+       List system changes
+
+       The changes command displays a summary of the recent system changes performed.</code></pre>
+
+
+<h2 id="help">help</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap -h</code></pre>
+
+
+<p>可以找到一段說明</p>
+<pre class="code"><code>Usage:
+ snap [OPTIONS] &lt;command&gt;
+
+Help Options:
+ -h, --help  Show this help message
+
+Available commands:
+
+...略...
+
+ changes     List system changes</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap changes -h</code></pre>
+
+
+<p>或是執行</p>
+<pre class="code"><code class="language-sh">$ snap changes --help</code></pre>
+
+
+<p>則會顯示</p>
+<pre class="code"><code>Usage:
+  snap [OPTIONS] changes [&lt;id&gt;]
+
+The changes command displays a summary of the recent system changes performed.
+
+Help Options:
+  -h, --help      Show this help message</code></pre>
+
+
+<h2 id="_1">指令範例</h2>
+<p>執行</p>
+<pre class="code"><code>$ snap changes</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>ID   Status  Spawn                 Ready                 Summary
+1    Done    2016-04-25T09:36:42Z  2016-04-25T09:38:58Z  Install &quot;hello-world&quot; snap</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -312,7 +381,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../../.." title="首頁">
+        <a href="../snap-install/" title="snap install">
           <span class="direction">
             上一頁
           </span>
@@ -322,7 +391,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                首頁
+                snap install
               </div>
             </div>
           </div>
@@ -330,22 +399,6 @@
       
     </div>
     <div class="next">
-      
-        <a href="../../deb-package/" title="index">
-          <span class="direction">
-            下一頁
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                index
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
-            </div>
-          </div>
-        </a>
       
     </div>
   </nav>

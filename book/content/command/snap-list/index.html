@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>snap - Ubuntu snap 使用筆記</title>
+        <title>snap list - Ubuntu snap 使用筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-util-snap/book/content/command/snap/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-util-snap/book/content/command/snap-list/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap-list/">
     <meta property="og:title" content="Ubuntu snap 使用筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap//../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-util-snap/book/content/command/snap-list//../../../">
     <meta name="apple-mobile-web-app-title" content="Ubuntu snap 使用筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -97,7 +97,7 @@
             
           </span>
         
-        snap
+        snap list
       </div>
     </div>
     
@@ -212,48 +212,9 @@
       
         
   <li>
-    <a class="current" title="snap" href="./">
+    <a class="" title="snap" href="../snap/">
       snap
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="觀看 help" href="#help">
-                觀看 help
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="執行指令" href="#_1">
-                執行指令
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="觀看 manpage" href="#manpage">
-                觀看 manpage
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="查詢 snap 放在那個位置" href="#snap">
-                查詢 snap 放在那個位置
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="查詢 snap 屬於那個套件" href="#snap_1">
-                查詢 snap 屬於那個套件
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -287,9 +248,36 @@
       
         
   <li>
-    <a class="" title="snap list" href="../snap-list/">
+    <a class="current" title="snap list" href="./">
       snap list
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="manpage" href="#manpage">
+                manpage
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="help" href="#help">
+                help
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="指令範例" href="#_1">
+                指令範例
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -322,76 +310,69 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="snap-command">snap command</h1>
-<h2 id="help">觀看 help</h2>
+          <h1 id="snap-list">snap list</h1>
+<h2 id="manpage">manpage</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ snap</code></pre>
+<pre class="code"><code class="language-sh">$ man snap</code></pre>
 
 
-<p>顯示</p>
-<pre class="code"><code>error: Please specify one command of: abort, ack, changes, connect, disconnect, find, install, interfaces, known, list, login, logout, refresh or remove</code></pre>
+<p>可以找到一段說明</p>
+<pre class="code"><code>COMMANDS
+
+...略...
+
+   list
+       List installed snaps
+
+       The list command displays a summary of snaps installed in the current system.</code></pre>
+
+
+<h2 id="help">help</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ snap -h</code></pre>
+
+
+<p>可以找到一段說明</p>
+<pre class="code"><code>Usage:
+ snap [OPTIONS] &lt;command&gt;
+
+Help Options:
+ -h, --help  Show this help message
+
+Available commands:
+
+...略...
+
+ list        List installed snaps</code></pre>
 
 
 <p>執行</p>
-<pre class="code"><code>$ snap --help</code></pre>
+<pre class="code"><code class="language-sh">$ snap list -h</code></pre>
 
 
 <p>或是執行</p>
-<pre class="code"><code>$ snap -h</code></pre>
+<pre class="code"><code class="language-sh">$ snap list --help</code></pre>
 
 
-<p>顯示</p>
+<p>則會顯示</p>
 <pre class="code"><code>Usage:
-  snap [OPTIONS] &lt;command&gt;
+  snap [OPTIONS] list
+
+The list command displays a summary of snaps installed in the current system.
 
 Help Options:
-  -h, --help  Show this help message
-
-Available commands:
-  abort       Abort a pending change
-  ack         Adds an assertion to the system
-  changes     List system changes
-  connect     Connects a plug to a slot
-  disconnect  Disconnects a plug from a slot
-  find        Finds packages to install
-  install     Install a snap to the system
-  interfaces  Lists interfaces in the system
-  known       Shows known assertions of the provided type
-  list        List installed snaps
-  login       Log into the store
-  logout      Log out of the store
-  refresh     Refresh a snap in the system
-  remove      Remove a snap from the system</code></pre>
+  -h, --help      Show this help message</code></pre>
 
 
-<h2 id="_1">執行指令</h2>
-<pre class="code"><code class="language-sh">$ snap find</code></pre>
-
-
-<h2 id="manpage">觀看 manpage</h2>
+<h2 id="_1">指令範例</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ man 1 snap</code></pre>
-
-
-<h2 id="snap">查詢 snap 放在那個位置</h2>
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ whereis snap</code></pre>
+<pre class="code"><code>$ snap list</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>snap: /usr/bin/snap /usr/share/man/man1/snap.1.gz</code></pre>
-
-
-<h2 id="snap_1">查詢 snap 屬於那個套件</h2>
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ dpkg -S /usr/bin/snap</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>snapd: /usr/bin/snap</code></pre>
-
-
-<p>表示「/usr/bin/snap」是屬於「<a href="http://packages.ubuntu.com/xenial/snapd">snapd</a>」這個套件。</p>
+<pre class="code"><code>Name         Version               Developer
+hello-world  6.0                   canonical
+ubuntu-core  16.04+20160419.20-55  canonical</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -410,7 +391,7 @@ Available commands:
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../../deb-package/snapd/" title="snapd">
+        <a href="../snap-changes/" title="snap changes">
           <span class="direction">
             上一頁
           </span>
@@ -420,7 +401,7 @@ Available commands:
             </div>
             <div class="stretch">
               <div class="title">
-                snapd
+                snap changes
               </div>
             </div>
           </div>
@@ -428,22 +409,6 @@ Available commands:
       
     </div>
     <div class="next">
-      
-        <a href="../snap-find/" title="snap find">
-          <span class="direction">
-            下一頁
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                snap find
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
-            </div>
-          </div>
-        </a>
       
     </div>
   </nav>

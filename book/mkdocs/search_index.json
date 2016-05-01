@@ -304,6 +304,31 @@
             "location": "/content/command/snap-changes/#_1",
             "text": "\u57f7\u884c  $ snap changes  \u986f\u793a  ID   Status  Spawn                 Ready                 Summary\n1    Done    2016-04-25T09:36:42Z  2016-04-25T09:38:58Z  Install  hello-world  snap",
             "title": "\u6307\u4ee4\u7bc4\u4f8b"
+        },
+        {
+            "location": "/content/command/snap-list/",
+            "text": "snap list\n\n\nmanpage\n\n\n\u57f7\u884c\n\n\n$ man snap\n\n\n\n\n\u53ef\u4ee5\u627e\u5230\u4e00\u6bb5\u8aaa\u660e\n\n\nCOMMANDS\n\n...\u7565...\n\n   list\n       List installed snaps\n\n       The list command displays a summary of snaps installed in the current system.\n\n\n\n\nhelp\n\n\n\u57f7\u884c\n\n\n$ snap -h\n\n\n\n\n\u53ef\u4ee5\u627e\u5230\u4e00\u6bb5\u8aaa\u660e\n\n\nUsage:\n snap [OPTIONS] \ncommand\n\n\nHelp Options:\n -h, --help  Show this help message\n\nAvailable commands:\n\n...\u7565...\n\n list        List installed snaps\n\n\n\n\n\u57f7\u884c\n\n\n$ snap list -h\n\n\n\n\n\u6216\u662f\u57f7\u884c\n\n\n$ snap list --help\n\n\n\n\n\u5247\u6703\u986f\u793a\n\n\nUsage:\n  snap [OPTIONS] list\n\nThe list command displays a summary of snaps installed in the current system.\n\nHelp Options:\n  -h, --help      Show this help message\n\n\n\n\n\u6307\u4ee4\u7bc4\u4f8b\n\n\n\u57f7\u884c\n\n\n$ snap list\n\n\n\n\n\u986f\u793a\n\n\nName         Version               Developer\nhello-world  6.0                   canonical\nubuntu-core  16.04+20160419.20-55  canonical",
+            "title": "snap list"
+        },
+        {
+            "location": "/content/command/snap-list/#snap-list",
+            "text": "",
+            "title": "snap list"
+        },
+        {
+            "location": "/content/command/snap-list/#manpage",
+            "text": "\u57f7\u884c  $ man snap  \u53ef\u4ee5\u627e\u5230\u4e00\u6bb5\u8aaa\u660e  COMMANDS\n\n...\u7565...\n\n   list\n       List installed snaps\n\n       The list command displays a summary of snaps installed in the current system.",
+            "title": "manpage"
+        },
+        {
+            "location": "/content/command/snap-list/#help",
+            "text": "\u57f7\u884c  $ snap -h  \u53ef\u4ee5\u627e\u5230\u4e00\u6bb5\u8aaa\u660e  Usage:\n snap [OPTIONS]  command \n\nHelp Options:\n -h, --help  Show this help message\n\nAvailable commands:\n\n...\u7565...\n\n list        List installed snaps  \u57f7\u884c  $ snap list -h  \u6216\u662f\u57f7\u884c  $ snap list --help  \u5247\u6703\u986f\u793a  Usage:\n  snap [OPTIONS] list\n\nThe list command displays a summary of snaps installed in the current system.\n\nHelp Options:\n  -h, --help      Show this help message",
+            "title": "help"
+        },
+        {
+            "location": "/content/command/snap-list/#_1",
+            "text": "\u57f7\u884c  $ snap list  \u986f\u793a  Name         Version               Developer\nhello-world  6.0                   canonical\nubuntu-core  16.04+20160419.20-55  canonical",
+            "title": "\u6307\u4ee4\u7bc4\u4f8b"
         }
     ]
 }

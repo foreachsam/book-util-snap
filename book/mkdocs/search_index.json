@@ -329,6 +329,31 @@
             "location": "/content/command/snap-list/#_1",
             "text": "\u57f7\u884c  $ snap list  \u986f\u793a  Name         Version               Developer\nhello-world  6.0                   canonical\nubuntu-core  16.04+20160419.20-55  canonical",
             "title": "\u6307\u4ee4\u7bc4\u4f8b"
+        },
+        {
+            "location": "/content/command/snap-remove/",
+            "text": "snap remove\n\n\nmanpage\n\n\n\u57f7\u884c\n\n\n$ man snap\n\n\n\n\n\u53ef\u4ee5\u627e\u5230\u4e00\u6bb5\u8aaa\u660e\n\n\nCOMMANDS\n\n...\u7565...\n\n   remove\n       Remove a snap from the system\n\n       The remove command removes the named snap from the system.\n\n       The snap's data is currently not removed; use purge for that. This behaviour will change before 16.04 is final.\n\n\n\n\nhelp\n\n\n\u57f7\u884c\n\n\n$ snap -h\n\n\n\n\n\u53ef\u4ee5\u627e\u5230\u4e00\u6bb5\u8aaa\u660e\n\n\nUsage:\n snap [OPTIONS] \ncommand\n\n\nHelp Options:\n -h, --help  Show this help message\n\nAvailable commands:\n\n...\u7565...\n\n remove      Remove a snap from the system\n\n\n\n\n\u57f7\u884c\n\n\n$ snap remove -h\n\n\n\n\n\u6216\u662f\u57f7\u884c\n\n\n$ snap remove --help\n\n\n\n\n\u5247\u6703\u986f\u793a\n\n\nUsage:\n  snap [OPTIONS] remove \nsnap\n\n\nThe remove command removes the named snap from the system.\n\nThe snap's data is currently not removed; use purge for that. This behaviour\nwill change before 16.04 is final.\n\nHelp Options:\n  -h, --help        Show this help message\n\n\n\n\n\u6307\u4ee4\u7bc4\u4f8b\n\n\n\u57f7\u884c\n\n\n$ sudo snap remove hello-world\n\n\n\n\n\u518d\u57f7\u884c\n\n\n$ snap list\n\n\n\n\n\u986f\u793a\n\n\nName         Version               Developer\nubuntu-core  16.04+20160419.20-55  canonical",
+            "title": "snap remove"
+        },
+        {
+            "location": "/content/command/snap-remove/#snap-remove",
+            "text": "",
+            "title": "snap remove"
+        },
+        {
+            "location": "/content/command/snap-remove/#manpage",
+            "text": "\u57f7\u884c  $ man snap  \u53ef\u4ee5\u627e\u5230\u4e00\u6bb5\u8aaa\u660e  COMMANDS\n\n...\u7565...\n\n   remove\n       Remove a snap from the system\n\n       The remove command removes the named snap from the system.\n\n       The snap's data is currently not removed; use purge for that. This behaviour will change before 16.04 is final.",
+            "title": "manpage"
+        },
+        {
+            "location": "/content/command/snap-remove/#help",
+            "text": "\u57f7\u884c  $ snap -h  \u53ef\u4ee5\u627e\u5230\u4e00\u6bb5\u8aaa\u660e  Usage:\n snap [OPTIONS]  command \n\nHelp Options:\n -h, --help  Show this help message\n\nAvailable commands:\n\n...\u7565...\n\n remove      Remove a snap from the system  \u57f7\u884c  $ snap remove -h  \u6216\u662f\u57f7\u884c  $ snap remove --help  \u5247\u6703\u986f\u793a  Usage:\n  snap [OPTIONS] remove  snap \n\nThe remove command removes the named snap from the system.\n\nThe snap's data is currently not removed; use purge for that. This behaviour\nwill change before 16.04 is final.\n\nHelp Options:\n  -h, --help        Show this help message",
+            "title": "help"
+        },
+        {
+            "location": "/content/command/snap-remove/#_1",
+            "text": "\u57f7\u884c  $ sudo snap remove hello-world  \u518d\u57f7\u884c  $ snap list  \u986f\u793a  Name         Version               Developer\nubuntu-core  16.04+20160419.20-55  canonical",
+            "title": "\u6307\u4ee4\u7bc4\u4f8b"
         }
     ]
 }

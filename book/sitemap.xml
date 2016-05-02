@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://foreachsam.github.io/book-util-snap/book/</loc>
-     <lastmod>2016-05-01</lastmod>
+     <lastmod>2016-05-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-util-snap/book/content/referance/manual/</loc>
-     <lastmod>2016-05-01</lastmod>
+     <lastmod>2016-05-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,13 +23,13 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-util-snap/book/content/deb-package/</loc>
-     <lastmod>2016-05-01</lastmod>
+     <lastmod>2016-05-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-util-snap/book/content/deb-package/snapd/</loc>
-     <lastmod>2016-05-01</lastmod>
+     <lastmod>2016-05-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -39,31 +39,37 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-util-snap/book/content/command/snap/</loc>
-     <lastmod>2016-05-01</lastmod>
+     <lastmod>2016-05-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-util-snap/book/content/command/snap-find/</loc>
-     <lastmod>2016-05-01</lastmod>
+     <lastmod>2016-05-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-util-snap/book/content/command/snap-install/</loc>
-     <lastmod>2016-05-01</lastmod>
+     <lastmod>2016-05-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-util-snap/book/content/command/snap-changes/</loc>
-     <lastmod>2016-05-01</lastmod>
+     <lastmod>2016-05-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-util-snap/book/content/command/snap-list/</loc>
-     <lastmod>2016-05-01</lastmod>
+     <lastmod>2016-05-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://foreachsam.github.io/book-util-snap/book/content/command/snap-remove/</loc>
+     <lastmod>2016-05-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
